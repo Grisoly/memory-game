@@ -81,7 +81,7 @@ function App() {
     <div className='App'>
       <h1>Beany_off Memory Game</h1>
       <div className='youtube'> 
-      <img src="public/img/youtube.png" alt="youtube" height='80px' /> <p><a href='https://www.youtube.com/@beany_off?sub_confirmation=1'>@beany_off</a> </p> </div>
+      <img src="/img/youtube.png" alt="youtube" height='80px' /> <p><a href='https://www.youtube.com/@beany_off?sub_confirmation=1'>@beany_off</a> </p> </div>
       <button onClick={shuffleCards}>New Game</button>
       
       <div className="card-grid">
@@ -100,7 +100,7 @@ function App() {
 
       <br/>
       <div>
-      <footer> <small>&copy; Copyright 2023. Souleimane Konate</small> </footer> 
+      <footer> <small>&copy; Copyright 2023. Souleimane Konate - contact : sporalimed@gmail.com</small> </footer> 
       </div>
       </div>
   )
