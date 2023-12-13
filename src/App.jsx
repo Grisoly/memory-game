@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
 import SingleCard from './components/SingleCard'
+import MusicPlayer from './components/MusicPlayer';
 
 const cardImages = [
   {"src": "/img/Yuta.png", matched:false},
@@ -16,7 +17,8 @@ function App() {
   const [turns, setTurns] =useState(0);
   const [choiceOne, setChoiceOne] = useState(null);
   const [choiceTwo, setChoiceTwo] = useState(null);
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(false);
+
 
 
 
@@ -71,13 +73,17 @@ function App() {
 
   //start new game at launch 
   useEffect(() => {
-    shuffleCards()
-, []})
+    shuffleCards()}, [])
+
+
 
   return (
     <div className='App'>
-      <h1>Beany_off Magic Match</h1>
+      <h1>Beany_off Memory Game</h1>
+      <div className='youtube'> 
+      <img src="public/img/youtube.png" alt="youtube" height='80px' /> <p><a href='https://www.youtube.com/@beany_off?sub_confirmation=1'>@beany_off</a> </p> </div>
       <button onClick={shuffleCards}>New Game</button>
+      
       <div className="card-grid">
         {cards.map(card => (
           <SingleCard 
@@ -90,6 +96,12 @@ function App() {
         ))}
       </div>
       <p>Turns : {turns} </p>
+     <div className='player'> Play Music :<MusicPlayer/></div>
+
+      <br/>
+      <div>
+      <footer> <small>&copy; Copyright 2023. Souleimane Konate</small> </footer> 
+      </div>
       </div>
   )
 }
